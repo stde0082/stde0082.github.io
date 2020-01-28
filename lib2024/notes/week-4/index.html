@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Forms</title>
+</head>
+<body>
+	<div id="wrapper" class="wrapper">
+		<section id="html-forms" class="main-section">
+			<!-- Form requires two attributes for it to be valid
+				action - is the page where the data goes when the form is submitted 
+				method - is how the data reaches its destination 
+				Two methods are: 
+				get(default) - this sends informatiom via query string and appends it to the end of address 
+				post - sends the data in encrypted package
+			 -->
+			<form action="somepage.php" method="get">
+				<div id="fn-container" class="form-elm">
+					<!-- An input element must be accompanied by a label 
+						A label has an attribute "for" which is used to connect it with the input element it is labelling
+						value of for attribute is same as the value for name attribute of the input element
+						Note: for HTML5 the value of for attribute must be equal to the id of the element 
+					-->
+					<label for="FirstName">First name</label>
+					<!-- a form input element must have two attributes:
+						1) Type : this determines the input type ex: text, password, number etc. 
+						name: is the unique identification for this input when data is submitted to the server mentioned in the action attribute of the Form
+					 -->
+					 <!-- Note: As a best practice use the same value for Id as Name, to make it easier to recogize for Styling and Javascript -->
+					<input type="text" name="FirstName" id="FirstName" placeholder="First name goes here">
+				</div>
+				<div id="ln-container" class="form-elm">
+					<label for="LastName">Last Name</label>
+					<!-- Other attribute of input element are: 
+						placeholder:the placeholder attribute is pseudo text shown to the user before they start inputting, as soon as the user starts typing, this text disappears
+					 -->
+					<input type="text" name="LastName" id="LastName" placeholder="Enter your Last Name here">
+				</div>
+				<div id="email-container" class="form-elm">
+					<label for="email">Email</label>
+					<!-- value attribute saves the input and submits it to the server
+					value attribute is permanent and would not dissapear when the user starts inputting
+					 -->
+					 <!-- HTML5 validates input given in an email input field, it must contain a @ symbol to be valid -->
+					 <!-- readonly attribute makes the field read only, therefore the user cannot make a change to it -->
+					<input type="email" name="email" id="email" value="example@g.com" readonly>
+				</div>
+				<div id="pass-container" class="form-elm">
+					<label for="pass">Password</label>
+					<!-- input type ="password" is used to create password inputs
+					- the value written in this input type is hidden
+					- instead of showing up as text, the browser displays it as dots
+					 -->
+					 <!-- required attribute is used to make this input required, therefore the browser won't let the user submit without adding this value -->
+					<input type="password" name="pass" id="pass" required>
+				</div>
+
+				<div id="sum-container" class="form-elm">
+					<label for="summary">Summary</label>
+					<!-- A textarea lets you submit information that is more than one line -->
+					<!-- The information submitted will correspond in the server -->
+					<!-- Textarea preserves line breaks while submitting to the server -->
+					<textarea name="summary" id="summary" placeholder="Enter summary here">
+						This is the value of text area
+					</textarea>
+				</div>
+
+				<div id="color-drop-container" class="form-elm">
+					<label for="fav-color">Favourite Color:</label>
+					<!-- select element is used to create dropdowns in HTML -->
+					<!-- select comes paired with <options> -->
+					<!-- The vlaue of the selected option gets submitted to the server -->
+					<select name="fav-color" id="fav-color">
+						<option value="red">Red</option>
+						<option value="blue">Blue</option>
+						<!-- selected attribute makes an option selected by default -->
+						<option value="green" selected>Green</option>
+					</select>
+				</div>
+
+				<div id="places-container" class="form-elm">
+					<h3>Places to visit:</h3>
+					<label for="germany">Germany</label>
+					<!-- input type checkbox is used to create checkboxes -->
+					<!-- The checkboxes of the same group share the same names -->
+					<!-- unique Id's are given for their unique identification -->
+					<!-- checkboxes unlike select dropdowns, allow multiple selections -->
+					<input type="checkbox" name="places" id="germany" value="germany"> <br>
+
+					<label for="paris">Paris</label>
+					<input type="checkbox" name="places" id="paris" value="paris"> <br>
+
+					<label for="australia">Australia</label>
+					<input type="checkbox" name="places" id="australia" value="australia"> <br>
+
+					<label for="iceland">
+						<!-- checkboxes have an attribute called checked, this will render them as checked by default -->
+						<input type="checkbox" name="places" id="iceland" value="iceland" checked>
+						Iceland
+					</label> <br>
+				</div>
+
+				<div id="radio-container" class="form-elm">
+					<p>Do you like forms?</p>
+					<label for="yes">
+						<!-- input type radio are singular value checkboxes, which means the user can select only one value -->
+						<!-- radio elements belonging to the same group share the names -->
+						<!-- the unique identification is id attribute -->
+						<!-- checked attribute for input type radio makes it checked by default -->
+						<input type="radio" name="like-form" id="yes" value="yes" checked>
+						Yes
+					</label>
+					<label>
+						<input type="radio" name="like-form" id="no" value="no">
+						No
+					</label>
+				</div>
+				<!-- fieldset creates a segment inside the form -->
+				<!-- it is used to create group of input types and have them displayed in a box -->
+				<!-- the fieldset will be read by the SEO crawler as a whole, meaning all the values of filedset is used to determine the overall rank of the page -->
+				<fieldset>
+					<!-- Legend is the title of fieldset -->
+					<legend>Select Our Free Services:</legend>
+					<div>
+						<label for="spam">
+							Spam me forever:
+							<input type="checkbox" name="spam" id="spam" checked>
+						</label>
+
+						<label>
+							Sell all of my information
+							<input type="checkbox" name="sell" id="sell" checked>
+						</label>
+					</div>
+				</fieldset>
+
+				<div id="og-contianer" class="form-elm">
+					<label for="FavFood">Favourite Food?</label>
+					<select id="FavFood" name="FavFood">
+						<!-- optgroup or option group is used to create groups in a select element -->
+						<optgroup label="Dessert">
+							<!-- when replacing a space or separating tow words in a value, as a best practice, use "_" instead of "-" as "-" might not get interpreted properly by the server -->
+							<option value="cheese_cake">Cheese Cake</option>
+							<option value="ice_cream">Ice Cream</option>
+							<option value="chocolate">Chocolate</option>
+							<option value="pie">Pie</option>
+						</optgroup>
+						<optgroup label="Lunch">
+							<option value="gc">Grilled Cheese</option>
+							<option value="pt">Poutine</option>
+							<option value="salad">Salad</option>
+						</optgroup>
+					</select>
+				</div>
+
+				<div id="st-container" class="form-elm">
+					<label for="num">Select a Number</label>
+					<!--  input type number is used to input numbers
+						Additonal attributes for input type number are : 
+						min, max
+					-->
+					<input type="number" id="num" name="num" min="-2" max="20" required><br>
+
+					<label for="ur">Enter a URL:</label>	
+					<!-- input type url is validated in HTML5 -->
+					<!-- The browser won't let the user submit a value that is not a url, i.e. it does not contain http or https -->
+					<input type="url" name="ur" id="ur" ><br>
+
+					<!-- input type="date" will create a date picker for the user -->
+					<!-- Also, the value is validated as per HTML5 for being an actual date -->
+					<label for="dte">Specify the Date?</label>
+					<input type="date" name="dte" id="dte"><br>
+
+					<!-- input type color creates a color picker for the user -->
+					<label for="co">Select a color:</label>
+					<input type="color" name="co" id="co">
+				</div>
+				<!-- button type="submit" creates a button that submits the form and HTML5 elements get automatically validated by the browser -->
+				<button type="submit">Submit</button>
+				<!-- button typ="reset" resets the form values, without needing to refresh the page -->
+				<button type="reset">Reset</button>
+			</form>
+		</section>
+	</div>
+</body>
+</html>

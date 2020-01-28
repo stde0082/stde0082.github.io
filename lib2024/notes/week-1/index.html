@@ -1,0 +1,79 @@
+<!-- html tag is called the root tag , as all of the html code resides within this tag -->
+<html>
+<!-- This is a comment -->
+<!-- this is another comment -->
+<!-- Sublime Text shortcut to create a shortcut is ctrl+/ -->
+
+	<head>
+
+		<!-- meta tags allow you to add additional information for the browser so as to enable it to interpret your document easily -->
+		<!-- meta tags allow you to add the propery and specify its value -->
+		<!-- here "charset" is the property and "utf-8" is the value -->
+		<!-- meta tag is an example of self closing tags -->
+		<meta charset="utf-8">
+		<!-- another way of writing meta tags is using name and content -->
+		<!-- name specifies the property and content specifies the value -->
+		<meta name="Author" content="Winnerjit Rator">
+
+		<!-- the head element contains the information about the current document, such as title, keywords, description and other data that is not considered document content. -->
+
+		<!-- title tag is used to give HTML document a human readbable title, which is interpreted by the browser and is shown in the tab displaying this document -->
+
+		<!-- Note: title must always be present in the HEAD element -->
+		<title>Week 2 - Intro to HTML</title>
+	</head>
+	<!-- to write any child tag, make sure to use indentation which is achived by pressing tab once,before writing the child tag, eg. here being body tag -->
+
+	<body>
+		<!-- A body tag is called the main container for HTML document, and it contains all the content of the web page -->
+
+		<!-- heading tag or h tags are used to specify the heading in the content of a document -->
+		<!-- heading tag ranges from <h1> to <h6> -->
+		<!-- The heading variantion is based upon importance -->
+		<!-- Note: <h1> tag has the highest importance where as <h6> has the least -->
+		<!-- Heading tag is also a block level element -->
+		<h1>Week 1 - Intro to HTML</h1>
+		<h2>Basic HTML tags</h2>
+		This is my content
+		<!-- Any line breaks that are specfied outside the block level elements will not be rendered in the document  -->
+
+
+
+
+		This is additional content 
+		<!-- paragraph or p tag is used to create paragrphs in your document -->
+		<!-- NOte : paragraph tag is an example of block level element -->
+		<p>This is a paragraph</p>
+		<p>This is another paragraph</p>
+
+		<p>
+			This is the first line
+			<!-- br or break tag is used to create a break in a pragraph -->
+			<!-- break tag is also called line break for html -->
+			<!-- the number of br tags will specify the number of line breaks -->
+			<br>
+			<br>
+			This is the second line
+		</p>
+
+		<!-- ul tag is one of the tags that is used to create lists in an html document -->
+		<!-- ul is short for unordered list which means it would create lists with bullet points -->
+		<ul>
+			<!-- li tag or list tag is used to create list elements for a list in html document -->
+			<!-- Note: <li> must be a child of <ul> tag to work and render properly -->
+			<li>List element 1</li>
+			<li>List element 2</li>
+		</ul>
+		<!-- ol is used to create ordered list in a html document -->
+		<ol>
+			<li>Ordered List 1</li>
+			<li>Ordered list 2</li>
+			<li>
+				<!-- list elements can take other block level elements as their children -->
+				<!-- <strong> tag is used to make a text bold while increasing its relavance and importance -->
+				<p>This is <strong>paragraph</strong> inside list element</p>
+				<p>This is another <strong>paragraph</strong></p>
+			</li>
+		</ol>
+	</body>
+</html>

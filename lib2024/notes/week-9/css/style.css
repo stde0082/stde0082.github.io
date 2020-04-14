@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+h1 {
+
+	font-family: 'Merriweather', serif;
+}
+
+p {
+
+	font-family: 'open_sansregular', sans-serif;
+
+}
+
+/*Adding color to the font family*/
+i.fas {
+	color: red;
+}

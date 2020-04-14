@@ -1,0 +1,62 @@
+/*CSS document is used to add external styles for the HTML document*/
+/*The externsion of this file must be .css */
+
+/*this is used to define the character set of the CSS file*/
+@charset "utf-8";
+
+body {
+	/*to add a background image, we use the backgroud-image property*/
+	/*the url is used to define the location of the image file to be used */
+	/* Here : we did 
+		 - "../" which means go up one directory 
+		 - "images/" which means open the images folder
+		 - "brick_wall.png" means use this file for the background
+	 */
+	
+	background-image: url("../images/brick_wall.png");
+}
+
+/* In this CSS block
+	
+	we are targetting the <a> tags present in <li> which must be preset in <nav>, which must be present in <header> tag
+*/
+header nav li a {
+	/*
+		rgb() is used to define color using red green and blue values 
+		Each value ranges from 0 to 255
+	*/
+	color: rgb(0,255,0);
+}
+
+/* Priority listing of the inline, embeded and external style goes this way:*/
+/* inline > embeded > external */
+
+p {
+	color: blue;
+}
+
+/* 
+	to target an HTML element using id , we use "#" followed the value of the id attribute of that element
+*/
+#container {
+	/*color with rgba() has the three rgb values  */
+	/*the 4th value is the alpha channel, which defines the opcatity of the color */
+	/* Its value will range from 0 to 1 */
+	/* 0 - transparent, 1 - opaque */
+	background-color:rgba(127,140,141, 0.5);
+}
+
+/* to access a html element using its class, we use "." followed by its class name */
+/* All the elements with this class get the styles applied */
+
+.sub-head {
+	text-decoration: underline;
+	font-weight: 100;
+	/* padding is the space inside the edges of the element*/
+	padding: 10px;
+	/* margin is the space outside of the edges*/
+	margin: 20px;
+	background-color: rgba(255,0,0,0.5);
+	/* border : width border-style color*/
+	border: 2px solid blue;
+}

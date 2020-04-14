@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+	<title>Week 11 - Form Validation</title>
+	<link rel="stylesheet" type="text/css" href="styles/form_validation.css">
+</head>
+<body>
+
+	<div class="overlay-container loader-container">
+		<div class="loader"></div>
+	</div>
+
+	<!-- header start -->
+	<header class="site-header clearfix" id="site-header">
+		
+	</header>
+	<!-- header end -->
+	<!-- main start -->
+	<main class="main clearfix" id="main">
+	
+			<br>
+			<section class="form-value-transfer clearfix">
+				<form id="form" action="submit.php" method="post">
+					<p>
+						<label>Name</label>
+						<input type="text" name="name" id="name">
+					</p>
+					<p>
+						<label>Postal Code</label>
+						<input type="text" required="" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" value="" name="pc" id="pc" placeholder="A0A 0A0">
+					</p>
+
+					<p>
+						<label>Email</label>
+						<input type="email" required name="email" id="email">
+					</p>
+
+					<button type="submit">Submit</button>
+				</form>
+
+				<div id="results">
+					<h2>Show values</h2>
+					<p >Name: <span id="name_result"></span></p>
+					<p >Postal Code: <span id="pc_result"></span></p>
+					<p >Email: <a href="#" id="email_result"></a></p>
+				</div>
+			</section>
+	</main>
+	<!-- main end -->
+
+	<!-- include jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- script tag is not a self closing tag so it requires </script> to close itself -->
+	<!-- To add an external script file, script tag is used with src attribute containing the path of the script that we would like to include in this document -->
+	<script type="text/javascript" src="scripts/form_validation.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS box modal</title>
+	<style type="text/css">
+		/*CSS reset*/
+		/* "*" is used to select all the elements on the page */
+		/* The following CSS block will reset the default padding and margin of all the elements to 0 */
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		/*CSS clearfix*/
+
+		/* a 0, b = 1, c = 0 */
+		/* CSS spec = 010 */
+		.clearfix {
+			/*overflow is the property of a HTML element that handles the overflowing content*/
+			/*overflow can have values such as :scroll, hidden, auto */
+			overflow: auto;
+		}
+
+		/*:after is a pseudo element that can be accessed by the browser if certain CSS is given and it is activated for that specific element */
+		/* in this case we have activated the "after" pseudo element of elements that have class clearfix*/
+		.clearfix:after{
+			/* content css property is used to pass content through CSS*/
+			/*by giving content to a pseudo element, it gets activated and can be used for manipulating CSS display*/
+			content: "";
+			
+			/* Clear is used to clear siblings when a element is displayed on the web page*/
+			/*It means, it would ignore the float value of its floating siblings*/
+			/*clear: left, right or both */
+			clear: both;
+			/*display is used to change the display of an element, it will override the default display set by the browser*/
+			/*Popular values : inline, block, inline-block, table */
+			display: table;
+
+		}
+
+		/* a = 1, b = 0, c = 1 */
+		/* CSS spec : 101 */
+		div#third-container {
+			background: purple;
+		}
+
+		/* CSS spec : 100 */
+
+		/* a = 0, b = 1, c = 1*/
+		/* CSS spec = 011 */
+		div.container {
+			background: turquoise;
+		}
+
+		/* a = 0, b= 1, c = 2 */
+		/* CSS spec : 012 */
+		div.container p{
+			color: white;
+		} 
+
+		/* a = 0, b = 1, c = 0*/
+		/* CSS spec = 010 */
+		.container {
+			width: 300px;
+			background-color: yellow;
+		}
+
+		.box {
+			/* New width = 150 - 60 = 90px*/
+			width: 90px;
+			/* padding is the space within the borders of an element*/
+			padding: 10px;
+			/*margin is the space outside the border of an elemement */
+			margin: 15px;
+			background: red;
+			/* float is the css property that makes the elements flow in a certain direction*/
+			/* It can take values : left or right */
+			float: left;
+			/*border: width style color*/
+			border: 5px solid blue;
+
+			/* total width = margin-left + border-left + padding-left + width + padding-right + border-right + margin-right */
+			/* 210 - 150 = 60px */
+			/* total width = 210(15+5+10+150+10+5+15)*/
+		}
+
+		.container-second {
+			width: 478.5px;
+			background: yellow;
+		}
+
+		.box-second {
+			background: red;
+			border: 5px solid blue;
+			float: left;
+			margin: 15px;
+			padding: 10px;
+			/*width : 50% means it will calcualte the 50% of its container width and apply to this element*/
+			/*width:50%;*/
+			/*calc is used to do mathematical calculations*/
+			/*In this case to have 50% width and to compensate the padding, margin and border*/
+			/*The formula is : calc(50% - 2x[15+10+5]) */
+			width:calc(50% - 60px);
+		}
+
+		.container-third {
+			width:289.75px;
+			background: yellow;
+		}
+
+		/* CSS specficity*/
+
+		/*
+			a = number of ids 
+			b = number of classes 
+			c = number of tags/elements
+		*/
+
+		/*By specfying .class-1.class-2, we tell the browser to apply this style to the element that has both the classes */
+		/*This would enhance the styles for each of the classes without affecting the original class styles */
+		.box.border-box{
+			/*in this case because of the presence of box-sizing, we only have to calculate the difference of left and right margins*/
+			width: calc(50% - 40px);
+			/* This tells the browser to calculate the width of the element by including the padding and the border-width */
+			box-sizing: border-box;
+			margin: 20px;
+		}
+
+		.box {
+			background: pink;
+		}
+		/* a = 0, b = 0, c = 1 */
+		p {
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<!-- An element can take multiple classes which is separated by a space " " -->
+	<!-- We give class clearfic to the container, to fix its display and have it shown with the proper height -->
+	<div class="container clearfix">
+		<div class="box">
+			<p>This is a paragraph</p>
+		</div>
+		<div class="box">
+			<p>This is another paragraph</p>
+		</div>
+	</div>
+
+	<div class="container container-second clearfix">
+		<div class="box-second">
+			<p>This is a paragraph</p>
+		</div>
+		<div class="box-second">
+			<p>This is another paragraph</p>
+		</div>
+	</div>
+
+	<div id="third-container" class="container container-third clearfix">
+		<div class="box border-box">
+			<p>This is a paragraph</p>
+		</div>
+		<div class="box border-box">
+			<p>This is another paragraph</p>
+		</div>
+	</div>
+	<!-- span being an inline element will not be affected by the properties of block level elements such as margin -->
+	<span style="background: orange;margin-top: 100000px;padding: 10px">This is span</span>
+	<!-- <p> being a block level element will have the specified margin applied to it -->
+	<p style="background: gray;margin: 5px;">This is paragraph</p>
+</body>
+</html>

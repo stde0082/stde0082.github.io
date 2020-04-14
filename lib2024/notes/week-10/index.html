@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+	<title>Responsive CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+
+	<div class="image-gallery-container image-gallery-overlay" id="image-gallery-overlay">
+		<div id="img-1" class="img-slide active">
+			<img src="images/gallery-img-1.jpg" alt="Gallery Image 1">
+		</div>
+		<div id="img-2" class="img-slide">
+			<img src="images/gallery-img-2.jpg" alt="Gallery Image 2">
+		</div>
+		<div id="img-3" class="img-slide">
+			<img src="images/gallery-img-3.jpg" alt="Gallery Image 3">
+		</div>
+	</div>
+	<!-- header start -->
+	<header class="site-header clearfix" id="site-header">
+		<div class="logo">Logo</div>
+		<h1 class="page-title">Page Title</h1>
+		<!-- main navigation start -->
+		<nav class="main-nav-container desktop-nav">
+			<ul class="main-nav clearfix">
+				<li>
+					<a href="contact-us.html">Contact Us</a>
+				</li>
+				<li>
+					<a href="about-us.html">About Us</a>
+					<ul class="sub-nav">
+						<li>
+							<a href="team.html">Team</a>
+						</li>
+						<li>
+							<a href="history.html">History</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="images.html">Images</a>
+				</li>
+				<li>
+					<a href="final.html">Images</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- main navigation end -->
+		<div class="ham"></div>
+		<!-- mobile navigation start -->
+		<div class="mobile-nav-container clearfix">
+			<nav class="main-nav-container mobile-nav">
+			<ul class="main-nav">
+				<li>
+					<a href="contact-us.html">Contact Us</a>
+				</li>
+				<li>
+					<a href="about-us.html">About Us</a>
+				</li>
+				<li>
+					<a href="images.html">Images</a>
+				</li>
+			</ul>
+		</nav>
+		</div>
+		<!-- mobile navigation end -->
+	</header>
+	<!-- header end -->
+	<!-- main start -->
+	<main class="main clearfix" id="main">
+		<!-- site content start -->
+		<article class="col-main site-content">
+			<!-- main content start -->
+			<section class="main-content">
+				<h2>Site content</h2>
+				<p>lorem ipsum</p>
+			</section>
+			<!-- main content end -->
+			<!-- image gallery start -->
+			<section class="image-gallery">
+				<h3>Image Gallery</h3>
+			
+				<div class="image-gallery-thumb-container clearfix">
+					<!-- data-img-id is an additional attribute used to give custom information that standard attributes cannot provide  -->
+					<div class="img-slide-thumb img-slide-thumb-active" data-img-id="img-1" >
+						<img src="images/gallery-img-1.jpg" alt="Gallery Image 1">
+					</div>
+					<div class="img-slide-thumb" data-img-id="img-2">
+						<img src="images/gallery-img-2.jpg" alt="Gallery Image 2">
+					</div>
+					<div class="img-slide-thumb" data-img-id="img-3">
+						<img src="images/gallery-img-3.jpg" alt="Gallery Image 3">
+					</div>
+				</div>
+			</section>
+			<!-- image gallery end -->
+			<section class="js-basics clearfix">
+				<h4>JS basics</h4>
+				<div id="color-1" class="js-color"></div>
+				<div id="color-2" class="js-color"></div>
+				<div id="color-3" class="js-color"></div>
+				<!-- <div id="color-4" class="js-color"></div> -->
+
+				<div id="indicator-text"></div>
+				<button class="reset">Reset</button>
+			</section>
+		</article>
+		<!-- site content end -->
+		<!-- site sidebar start -->
+		<aside class="col-main site-sidebar">
+			<h4>Sidebar</h4>
+			<nav class="sidebar-nav-container">
+				<ul class="sidebar-nav">
+					<li>
+						<a href="https://google.com" onclick="alert('clicked')">Google</a>
+					</li>
+					<li>
+						<a href="https://wikipedia.com">Wikipedia</a>
+					</li>
+					<li>
+						<a href="https://w3schools.com">W3Schools</a>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<!-- site sidebar end -->
+	</main>
+	<!-- main end -->
+	<!-- footer start -->
+	<footer class="footer" id="footer">
+		<div class="footer-container">
+			<section class="col-footer company-info">
+				<h4>Comapny info</h4>
+				<address>
+					<p>1385 Woodroffe Avenue</p>
+					<p>Ottawa, ON K2G 1V8</p>
+				</address>
+			</section>
+
+			<section class="col-footer links">
+				<h4>Links</h4>
+				<nav>
+					<ul>
+						<li>
+							<a href="contact-us.html">Contact Us</a>
+						</li>
+						<li>
+							<a href="about-us.html">About Us</a>
+						</li>
+						<li>
+							<a href="images.html">Images</a>
+						</li>
+					</ul>
+				</nav>
+			</section>
+
+			<section class="col-footer social-media">
+				<h4>Social Media</h4>
+				<nav>
+					<ul>
+						<li>
+							<a href="facebook.com">Facebook</a>
+						</li>
+						<li>
+							<a href="twitter.com">Twitter</a>
+						</li>
+						<li>
+							<a href="instagram.com">Instagram</a>
+						</li>
+					</ul>
+				</nav>
+			</section>
+		</div>
+
+		<p>Copyright &copy; Responsive CSS 2018</p>
+	</footer>
+	<!-- footer end -->
+
+	<!-- script tag is not a self closing tag so it requires </script> to close itself -->
+	<!-- To add an external script file, script tag is used with src attribute containing the path of the script that we would like to include in this document -->
+	<script type="text/javascript" src="scripts/script.js"></script>
+
+	<!-- script tag is an embeded way of adding javascript to your document -->
+	<!-- Script tag must be added at the bodttom of your HTML file before the closing of <body> tag -->
+	<!-- This will make sure that all the elements are properly loaded and ready for javascript to interact with them -->
+
+	<script type="text/javascript">
+		document.querySelector('.logo').style.backgroundColor="red";
+	</script>
+
+</body>
+</html>

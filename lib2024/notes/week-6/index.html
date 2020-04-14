@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- html should have lang attribute, we use en-ca to declare it is Canadian English -->
+<html lang="en-ca">
+<head>
+	<meta charset="utf-8">
+	<title>Basic CSS - Week 8</title>
+
+	<!-- the link tag is used for linking CSS files, it needs to have two attributes  -->
+	<!-- type="text/css" -->
+	<!-- href="css/styles.css" -->
+	<!-- href is used to define the relative path of the css file that we can to link to this html -->
+	<!-- In this case we used the style.css file present in css folder -->
+	<!-- css/ means use css folder and open it -->
+	<!-- style.css means we want to link style.css  -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Using <style> tag inside head element we can define styles for the document -->
+	<!-- This method is called embeded styles -->
+	<style type="text/css">
+		/* 
+			The following is a css block and is defined by :
+			1) the element(s) that you want to target
+			2) {}
+			3) containing CSS block;
+		*/
+		/*
+			various elements can be targetted by using "," at the start of the css block
+		*/
+		h1,h2 {
+			color: green;
+			text-align: center;
+		}
+
+		/*All of the <p> tags will get this style applied */
+		/* But the <p> tag with the inline styles will retain its properties because inline styles will override any embeded or external style sheets*/
+		p {
+			/*We use hex notation to define colors*/
+			/*000000*/
+			/*ffffff*/
+			color: #888888;
+			font-size: 28px;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- It is important to add classes and Ids to elements, to be able to access them via CSS -->
+	<div id="container" class="container">
+		<!-- header start -->
+		<header class="site-header">
+			<!-- img tag is used to add images -->
+			<!-- src attr is used to specify the path of the image that we are accessing  -->
+			<!-- All the path of the images are relative to your HTML document -->
+			<!-- / is used to access content inside a folder, here we use images/ to acess images inside "images" folder -->
+			<img src="images/dino-logo.png" class="logo" alt="Dino website logo">
+			<h1>Awesome Dinosaurs</h1>
+
+			<nav>
+				<ul>
+					<li>
+						<a href="contact-us.html">Contact Us</a>
+					</li>
+					<li>
+						<a href="about-us.html">About Us</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- header end -->
+
+		<main id="main" class="main">
+			<!-- any styles applied to the parent element will be inhereited by the children -->
+			<!-- This can be overwritten by adding the same property in the child element -->
+			<section style="font-style: italic;" class="content">
+				<!-- by adding font-style:initial we override the value of the font-style css rpoperty from the parent section and set it to be the inital value which is the default Browser style -->
+				<h2 class="sub-head" style="font-style: initial;">Some cool facts about Dinosaurs!</h2>
+				<p >
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu sem tempor, rutrum est eget, auctor mi. Maecenas pharetra euismod commodo. Duis lacinia semper mi non interdum. Cras accumsan laoreet libero sit amet malesuada. Integer rhoncus quam id nulla facilisis, a pharetra sem sagittis. Sed sit amet efficitur velit, eu volutpat velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus in blandit ante. Proin rutrum volutpat sem at tempor. Sed porta volutpat ornare. Etiam eget sodales velit, vitae imperdiet mauris. Vestibulum vestibulum orci nec nulla molestie molestie. Cras non dapibus lacus. Integer consequat lectus eget pharetra facilisis. Morbi dapibus consequat sodales.
+				</p>
+				<!-- style attribute is used to define styles for an individual tag -->
+				<!-- This method is called inline styles -->
+				<!-- We used "color" - property name -->
+				<!-- Followed by ":" -->
+				<!-- Followed by "red" - this is the value of the css property -->
+				<!-- To end a CSS declaration we use ";" -->
+				<!-- NOte: ";" is also used to separate two CSS properties -->
+				<!-- font-size is used to change the font of this paragraph -->
+				<p style="color:red;font-size:22px;">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu sem tempor, rutrum est eget, auctor mi. Maecenas pharetra euismod commodo. Duis lacinia semper mi non interdum. Cras accumsan laoreet libero sit amet malesuada. Integer rhoncus quam id nulla facilisis, a pharetra sem sagittis. Sed sit amet efficitur velit, eu volutpat velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus in blandit ante. Proin rutrum volutpat sem at tempor. Sed porta volutpat ornare. Etiam eget sodales velit, vitae imperdiet mauris. Vestibulum vestibulum orci nec nulla molestie molestie. Cras non dapibus lacus. Integer consequat lectus eget pharetra facilisis. Morbi dapibus consequat sodales.
+				</p>
+
+				<h3>Read about Dinosaurs</h3>
+				<p>
+					<!-- An element can have multiple classes separated by a space -->
+					<!-- The id for an element is unique, so it can only have one id -->
+					<a id="google-link" class="btn green" href="google.com">Google</a>
+					<a id="wiki-link" class="btn blue" href="wikipedia.com">Wikipedia</a>
+				</p>
+			</section>
+
+			<section class="some-dino">
+				<h2>Some dinosaurs</h2>
+				<ul class="dino-list">
+					<li>
+						<figure>
+							<img src="images/ancylosaurus.jpg" alt="ancylosaurus toy">
+							<figcaption>Ancylosaurus</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="images/stegosaurus.jpg" alt="stegosaurus toy">
+							<figcaption>Stegosaurus</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="images/triceratops.jpg" alt="triceratops toy">
+							<figcaption>Triceratops</figcaption>
+						</figure>
+					</li>
+				</ul>
+			</section>
+
+			<section class="fav-movie">
+				<div>
+					<h2 class="sub-head">My favorite Dino movies</h2>
+					<dl>
+						<dt>Name</dt>
+						<dt>Jurasic World</dt>
+						<dt>Director</dt>
+						<dt>Collin Trevorrow</dt>
+						<dt>Year Released</dt>
+						<dt>2015</dt>	
+					</dl>
+				</div>
+
+				<div>
+					<h2>The Jurrassic Park Series</h2>
+					<ol>
+						<li>Jurassic Park</li>
+						<li>The Lost World</li>
+						<li>Jurassic Park 3</li>
+						<li>Jurassic World</li>
+					</ol>
+				</div>
+			</section>
+		</main>
+
+		<aside class="sidebar">
+			<section>
+				<h2 class="section-title">Other Dinos</h2>
+				<ul class="other-dino-list">
+					<li>Alberosaurus</li>
+					<li>Camptosaurus</li>
+					<li>Supersaurus</li>
+				</ul>
+			</section>
+		</aside>
+
+		<footer>
+			<!-- Structured Data Object -->
+			<!-- any element having a item* attribute is termed as structured Data element -->
+			<div itemscope itemtype="http://schema.org/Person">
+				<span itemprop="name">Winnerjit Rathor</span>
+				<div itemscope itemtype="http://schema.org/PostalAddress" itemprop="address">
+					<span itemprop="streeAddress">1385 Woodroffe Ave.</span>
+					<span itemprop="addressLocality">Ottawa</span>
+					<span itemprop="addressRegion">Ontario</span>
+					<span itemprop="addressCountry">Canada</span>
+					<span itemprop="PostalCode">K2G 1V8</span>
+				</div>
+			</div>
+			<!-- &copy; is an HTML entity that will create copy symbol when rendered by thr Browser -->
+			<p>Copyright &copy; 2019 Winnerjit Rathor</p>
+		</footer>
+	</div>
+</body>
+</html>

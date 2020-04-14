@@ -1,0 +1,29 @@
+imensions:
+Element 	Width 	Height 	Parent
+Page 	100% 	Auto 	N/A
+Header 	100% 	1px 	Page
+Main 	100% 	Auto 	Page
+Article 	60% 	1px 	Main
+Aside 	90% 	1px 	Main
+Footer 	100% 	1px 	Page
+Image 	1px 	1px 	Aside
+Colors:
+Color 	Used for 	Used as 	Hex value 	RGB Values 	Opacity
+Black 	Text 	Primary 	#000000 	(0,0,0) 	1
+Green 	Background 	Primary 	#7cc576 	RGB(124,197,118) 	1
+Blue 	Navigation 	Accent 	#6dcff6 	RGB(109,207,246) 	1
+BG White 	Background 	Primary 	#ffffff 	RGB(255,255,255) 	1
+Fonts:
+Name 	Use 	Size 	Weight
+Source Sans Pro 	Body Text 	16px 	normal
+Noto Serif 	Headers 	Auto 	normal
+URLs:
+
+    Source Sans Pro: https://fonts.google.com/specimen/Source+Sans+Pro
+    Noto-Serif: https://fonts.googleapis.com/css?family=Noto+Serif
+
+Background Images:
+
+    URL: https://www.toptal.com/designers/subtlepatterns/white-waves-pattern/
+    Style: White Waves Pattern
+

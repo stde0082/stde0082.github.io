@@ -12,3 +12,15 @@
 p { font-family: 'MyWebFont', Arial, sans-serif; }
 
 <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+
+
+<style>
+body {
+  background-color: linen;
+}
+
+h1,h2,h3,h4{
+  color: maroon;
+  margin-left: 40px;
+}
+</style>

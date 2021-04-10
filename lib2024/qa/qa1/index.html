@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html lang="en-ca">
 <head>
 	<meta charset="utf-8">
 	<title>LIB2024 - QA</title>
@@ -14,10 +14,11 @@
 
                 
 <p>			
-<strong>1) What are the three components of Web?</strong>
+1) What are the three components of Web?
+
 HTML,CSS,Javascript
 
-<strong>2) Define version control and give one example.</strong>
+2) Define version control and give one example.
 
 Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. 
 
@@ -28,7 +29,7 @@ Version control is a system that records changes to a file or set of files over 
 
 4) What tag is used to create a paragraph in html? Give an example.
 
-<p> </p>
+<p>  this is a paragraph </p>
 
 
 5) Identify the odd one from these tags: <span>, <p>, <a>, <i>  and state the reason?
@@ -47,24 +48,89 @@ Version control is a system that records changes to a file or set of files over 
 	<b></b> <!-- only tag unrelated for a html table tag-->
 
 9) Give an example of color picker input. 
+<div>
+    <input type="color" id="head" name="head"
+           value="#e66465">
+    <label for="head">___</label>
+</div>
+
 
 10) What is the use of name and value attributes? Give two examples 
 
-11) Give an example of inline style. 
+For a element, the name attribute specifies a name for the information/value of the content attribute.
 
-12) How would you link an external style sheet? Give example. 
+ 1. <meta charset="utf-8">
+
+ 2. <param name="" value="">
+
+11) Give an example of inline style.
+
+<p style="color: blue; font-size: 46px;"> 
+
+12) How would you link an external style sheet? Give example.
+
+use link nod with a CSS file attched with web folder.
+
+ <link rel="stylesheet" type="text/css" href="styles/css-special-selector.css">
 
 13) Create CSS block to center an element both horizontally and vertically that has position:absolute and has width:200px and height:200px. 
 
+Center-Container {
+  position: relative;
+}
+
+.Absolute-Center {
+  width: 200px;
+  height: 200px;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
 14) Create CSS keyframes block called "spin" that rotates an element. 
+
+ { @keyframes spin
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 15) Create CSS animation block to rotate an element that has the following properties :
 
     class "rotate-me"
     It rotates 5 times at intervals of 0.5s with "linear" transition using animation keyframes "spin"
 
+
+
+
+
 16) How would you include create an alert with string "I love JavaScript" using JavaScript?
 
+let str = "I love JavaScript";
+
+let result = str.match(/Java(Script)/);
+
+
+17) How would you fade out an element with id "fade-me" after a delay of 300ms using JQuery?
+
+createTableFromJSON();
+		   		 // fadeOut is a jQuery function to fadeOut an element // 
+   		 		$('.overlay-container').delay(300).fadeOut(300);
+
+18) How would you select all elements with class "my-class" using Javascript and Jquery? 
+
+var elementsArray = document.getElementsByClassName("my-class");
+
+19) Give an example of input field that takes phone number with format "123-456-7890"?
+
+<input type="number" id="mobile number" name="mobile number" placeholder="123-456-7890"><br>
+
+
+20)  Among HTML, CSS, Javascript, JQuery, what language did you like the best? State the reason.
 
 
 			</p>

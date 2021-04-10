@@ -8,7 +8,7 @@ body {
   background-color: linen;
 }
 
-h1,h2,h3,h4{
+h1,h2,h3,h4, th{
   color: maroon;
   margin-left: 40px;
 }
@@ -21,14 +21,15 @@ h1,h2,h3,h4{
 
          <br>
     </head>
+
+    <section style="background: maroon;margin: 5px;">
 <!--page content markers-->
   <div>Home</div>
   <div>About</div>
   <div>Schedule</div>
     <div>Portfolio</div>
       <div>Contact</div>
-
-   <body>
+</section>
 
 
           <h2>About</h2>
@@ -61,19 +62,24 @@ h1,h2,h3,h4{
                         <tr>
             <style>
 
-th{
-  color: maroon;
-  margin-left: 40px;
-}
+<style>
+              table,
+                 th,
+                         td {
+                        padding: 10px;
+                        border: 1px maroon;
+                         border-collapse: collapse;
+                               }
+                                    </style>    
 
-</style>
+
                             <th>Time</th>
                             <th>Monday</th>
                             <th>Tuesday</th>
                             <th>Wednesday</th>
                             <th>Thrusday</th>
                             <th>Friday</th>
-                            
+                </style>            
                         </tr>
                     </thead>
                   
@@ -144,7 +150,7 @@ th{
         <form id="form" action="submit.php" method="post">
           <p>
             <label>Name</label>
-            <input type="text" name="name" id="name">
+             <input type="text" required="" pattern="" value="" name="pc" id="pc" placeholder="">
           </p>
         
           <p>
@@ -192,8 +198,9 @@ th{
 <div>Ottawa, Ontario K2G 1V8</div>
 
                         <br>
-                                                 <footer> 
+                                                 <footer style="background: darkgray;margin: 5px;"> 
 <!-- footer content: page content markers -->
+<!-- footer start -->
 
 <h5>Quick Links</h5>
 <div>

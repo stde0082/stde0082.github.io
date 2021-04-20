@@ -16,6 +16,7 @@ h1,h2,h3,h4, th{
 
 </style>
 <title>My Logo</title>
+<meta name="viewport" content="width=device-width, inital=1.0">
 
      <h1> My Logo </h1>
 
@@ -24,11 +25,15 @@ h1,h2,h3,h4, th{
 
     <section style="background: maroon;margin: 5px;">
 <!--page content markers-->
+ 
+ 
+
   <div>Home</div>
   <div>About</div>
   <div>Schedule</div>
     <div>Portfolio</div>
       <div>Contact</div>
+      
 </section>
 
 
@@ -62,14 +67,16 @@ h1,h2,h3,h4, th{
                         <tr>
             <style>
 
-<style>
               table,
                  th,
                          td {
                         padding: 10px;
                         border: 1px maroon;
                          border-collapse: collapse;
-                               }
+
+                            border: 1px solid black;
+                         border-collapse: collapse;
+                                  }
                                     </style>    
 
 
@@ -128,16 +135,12 @@ h1,h2,h3,h4, th{
                         </tr>
 
                        </tbody>
-                    <tfoot>
-                        <tr>
-                           
-                        </tr>
-                    </tfoot>
+
                 </table>
             </section>
                  <br>
 
-                    <br>
+            
 <!-- html form -->
 <h4>Create Profile</h4>
 
@@ -168,15 +171,33 @@ h1,h2,h3,h4, th{
           </p>
         
 <p>
-            <label>Province</label>
-            
-            <input type="text" required="" pattern="" value="" name="pc" id="pc" placeholder="">
 
-
+<div id="og-contianer" class="form-elm">
+          <label for="province">Province</label>
+          <select id="Province" name="Province">
+            <!-- optgroup or option group is used to create groups in a select element -->
+            <optgroup label="Province">
+              <!-- when replacing a space or separating tow words in a value, as a best practice, use "_" instead of "-" as "-" might not get interpreted properly by the server -->
+              <option value="AB">Alberta</option>
+              <option value="BC">British Columbia</option>
+              <option value="MB">Manitoba</option>
+              <option value="NB">New Brunswick</option>
+              <option value="NL">Newfoundland and Labrador</option>
+              <option value="NT">Northwest Territories</option>
+              <option value="NS">Nova Scotia</option>
+              <option value="NU">Nunavut</option>
+              <option value="ON">Ontario</option>
+              <option value="PE">Prince Edward Island</option>
+              <option value="QC">Quebec</option>
+              <option value="SK">Saskatchewan</option>
+              <option value="YT">Yukon</option>
+            </optgroup>
+          </select>
        <p>
             <label>Postal Code</label>
-            <input type="text" required="" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" value="" name="pc" id="pc" placeholder="">
-          </p> 
+            <input type="text" required="" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" value="postal code" name="" id="" placeholder="Enter postal code">
+          
+        
 
           <button type="submit">Submit</button> 
         </form>
